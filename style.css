@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cafe-francoise');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: rgb(246, 255, 255);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+hr{
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}
+
+header{
+    /* flex treats a layout as one dimensional, it being a row or a colum  */
+    display: flex;
+    /* push the first and last items to the far left and far right
+       while maintaining  the items in between centered */
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: black;
+}
+
+.logo{
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover{
+    color: #0088a9;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0, 136, 169, 0.3);
+}
+
+.copy_btn{
+    background-image: url(images/copy_to_clipboard_icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #0088a9;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: none;
+}
+
+.close_btn{
+    margin-right: -75%;
+    transition: none;
+    background-image: url(images/close_icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+
+.banner{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    max-height: 16em;
+    overflow: hidden;
+    margin: 30px 5% 10vh 5%;
+    border-radius: 15px;
+}
+
+.banner-container{
+    margin: 5% 5%;
+    color: white;
+    line-height: 2.5em;
+}
+
+.banner-container h1{
+    font-family: 'Café Françoise', sans-serif;
+    font-size: 2.5em;
+    font-weight: lighter;
+    width: fit-content;
+    max-width: 45vw;
+}  
+
+.banner-container p{
+    font-size: 0.8em;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media(max-width:400px){
+    
+    .banner-container{
+        margin: 8% 8%;
+        line-height: 2.2em;
+    }
+
+    .banner-container h1{
+        font-size: 1.9em;
+    }  
+
+    .banner-container p{
+        font-size: 0.75em;
+    }
+}
+
+
+/* ---SELECT-MENU--- */
+
+
+.menu{
+    margin: 100px 10%;
+    background-color: #F2D6B3;
+    border-radius: 75px;
+    padding-bottom: 1px;
+}
+@media(min-width:1000px){
+    .menu{
+        margin: 100px 25%;
+    }
+}
+
+.menu #little_chef_guy{
+    margin: 10px 20px;
+    position: absolute;
+    width: 90px;
+}
+@media(max-width:485px){
+    .menu #little_chef_guy{
+        margin-top: 30px;
+        width: 70px;
+    }
+}
+
+.selector-img{
+    height: 20px;
+    width: 20px;
+    transition: 0.3s;
+}
+
+.select-menu.active .selector-img{
+    transform: rotate(-180deg);
+}
+
+.select-menu {
+    margin: 30px 5% 40px 5%;
+}
+
+.select-menu .Sbtn_text{
+    font-family: cursive, Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+.menu h1{
+    color: #734E39;
+    font-family: 'Café Françoise', sans-serif;
+    font-weight: lighter;
+    
+}
+
+.select-menu .select-btn{
+    cursor: pointer;
+    display: flex;
+    height: 55px;
+    background: #D99F6C;
+    border: rgb(247, 223, 214);
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.select-menu .select-menu-options{
+    position: relative;
+    padding: 20px;
+    background: #d3ad8b;;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.select-menu-options .option{
+    display: flex;
+    min-height: 85px;
+    align-items: flex-start;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.88);
+    transition: all 0.3s ease 0s;
+}
+
+.select-menu-options .option:hover{
+    background: rgba(0, 0, 0, 0.1);;
+}
+
+.select-menu.active .select-menu-options{
+    display: block;
+}
+
+
+.option img{
+    min-height: 85px;
+    max-width: 120px;
+    margin-right: 0.4vw;
+    border-radius: 8px;
+}
+
+
+.option .option-text-title{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.option .option-text{
+    font-size: 13px;
+    font-weight: 100;
+    padding: 10px;
+}
+
+
+@media(max-width:550px){
+    
+    .select-menu-options .option{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .select-menu-options .option:hover{
+        background: rgba(0, 0, 0, 0.1);;
+    }
+    
+    .select-menu.active .select-menu-options{
+        display: block;
+    }
+    
+    
+    .option img{
+        min-height: 85px;
+        max-width: 120px;
+        margin-right: 0.4vw;
+        border-radius: 8px;
+    }
+    
+    
+    .option .option-text-title{
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+    }
+    
+    .option .option-text{
+        font-size: 13px;
+        font-weight: 100;
+        padding: 10px;
+    }
+}
+
+/* ---END OF SELECT-MENU--- */
+footer{
+    /* for the footer to stay at bottom, you will need to change settings on body */
+    margin-top: auto;
+    background: rgb(18, 18, 18);
+    color: #edf0f1;
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content .message{
+    font-size: 10px;
+    word-spacing: 1px;
+    margin: 0;
+    max-height: 250px;
+    color: rgba(245, 222, 179, 0.45);
+}
+
+
+.footer-content p{
+    max-width: 500px;
+    margin: 0px 0 8px 0;
+    line-height: 28px;
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+
+.footer-content span{
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+.popup{
+    /* width: 25vw; */
+    background: rgb(18, 18, 18);
+    color: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 38%;
+    align-self: center;
+    /* transform: translate(-30%, -30%); */
+    text-align: center;
+    padding: 10px 15px;
+    visibility: hidden;
+
+    border: 10px;
+    border-color: #0088a9;
+}
+
+.popup.active{
+    visibility: visible;
+}
+
+.popup h2{
+    margin-bottom: 15px;
+}
+
+.popup img{
+    width: 50px;
+    margin-bottom: 2px;
+}
+
+.popup button{
+    margin-left: 10px;
+}
+
+.popup form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.copy_btn.active{
+    background-color: rgb(85, 197, 85);
+    background-image: url(images/tick_icon.svg);
+}
+
+
+.aboutUs_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 120px;    
+}
+
+.aboutUs_container h1{
+    font-size: 1.9rem;
+    width: fit-content;
+    margin-bottom: 18px;
+}
+
+.aboutUs_container hr{
+    margin-left: 0;
+    margin-right: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #0088a9;
+    border: none;
+}
+
+.aboutUs_container .aboutUs_text{
+    max-width: 50ch;
+    padding-left: 25px;
+    line-height: 24px;
+}
+
+.aboutUs_container .aboutUs_text p{
+    font-size: clamp(10px, 16px);
+}
+
+.aboutUs_container .aboutUs_text :not(:first-of-type){
+    padding-top: 15px;
+}
+
+.aboutUs_container img{
+    max-width: 336.6px;
+    border-radius: 7px;
+}
+
+@media (max-width:940px) {
+    .aboutUs_container{
+        flex-direction: column;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .aboutUs_container :first-child{
+        order: 2;
+    }
+
+    .aboutUs_container .aboutUs_text{
+        text-align: center;
+        margin-bottom: 40px;
+        max-width: 40ch;
+        padding: 0;
+    }
+
+    .aboutUs_container .aboutUs_text h1{
+        margin: auto;
+        margin-bottom: 25px;
+    }
+}
