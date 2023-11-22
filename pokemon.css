@@ -1,0 +1,61 @@
+/* Adicione estilos para o body */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+/* Adicione estilos para a div envolvendo o título */
+.header-background {
+  background: #d99f6c; /* Cor de fundo branca para a área envolvendo o título */
+  padding: 20px; /* Adiciona espaçamento interno para melhor legibilidade */
+  text-align: center; /* Centraliza o conteúdo horizontalmente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+/* Adicione estilos para o título principal */
+h1 {
+  color: #ffffff; /* Cor do texto para preto */
+  margin: 0; /* Remove margens padrão */
+}
+
+/* Adicione estilos para a grade de pokémons */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  justify-content: center; /* Centraliza a grade na página */
+  padding: 20px; /* Adiciona espaçamento interno para melhor legibilidade */
+  background: #fff; /* Cor de fundo branca para a área da grade */
+  border-radius: 16px; /* Adiciona bordas arredondadas à área da grade */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil à área da grade */
+}
+
+/* Adicione estilos para os cards de pokémons */
+.pokemon-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave ao hover */
+  cursor: pointer;
+  background: #fff; /* Cor de fundo para branco */
+  border-radius: 8px; /* Adiciona bordas arredondadas aos cards */
+}
+
+/* Adicione estilos para os cards de pokémons no hover */
+.pokemon-card:hover {
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+/* Adicione estilos para o nome dos pokémons */
+.pokemon-card p {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Adicione estilos para as imagens dos pokémons */
+.pokemon-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Adiciona bordas arredondadas às imagens */
+}
