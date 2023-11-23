@@ -18,5 +18,5 @@ A apresentação será avaliada, bem como o código e o layout final.
 + Deve ter menu dropdown e layout responsivo ✔️
 + Ter pelo menos 1 formulário ✔️
 + O DOM deve ser manipulado de alguma forma usando JS ✔️
-+ Deve usar o AXIOS para a leitura de dados
++ Deve usar o AXIOS para a leitura de dados ✔️
 + O site todo deve ter no mínimo 5 páginas diferentes.
