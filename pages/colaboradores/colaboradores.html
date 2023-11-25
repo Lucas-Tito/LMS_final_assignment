@@ -2,17 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transparência de Software</title>
-    <link rel="shortcut icon" type="x-icon" href="images/shortcut-icon.svg" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Colaboradores</title>
+    <link rel="stylesheet" href="./../../styles/pokemon.css" />
+    <link rel="stylesheet" href="./../../styles/style.css" />
+
+    <!-- Adicione um arquivo de estilo CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./../../scripts/axios.js"></script>
   </head>
   <body>
     <!-- header represents a support tag that can work as a navigation section -->
     <header>
-      <a href="index.html"
-        ><img class="logo" src="images/logo.svg" alt="logo"
+      <a href="./../.././../../index.html"
+        ><img class="logo" src="./../../images/logo.svg" alt="logo"
       /></a>
 
       <!-- nav is a section that contains links to others pages -->
@@ -29,10 +32,10 @@
               </button>
 
               <div class="dropdown-content">
-                <a href="PIBIC.html">PIBIC</a>
-                <a href="whatIS.html">O que é transparência?</a>
-                <a href="page4.html">Colaboradores</a>
-                <a href="#">Page5</a>
+                <a href="./../pibic/pibic.html">PIBIC</a>
+                <a href="./../transparencia/transparencia.html">O que é transparência?</a>
+                <a href="#">Colaboradores</a>
+                <a href="./../ufc/ufc.html">UFC</a>
               </div>
             </div>
           </li>
@@ -41,26 +44,10 @@
       <button class="contact_btn">Contact</button>
     </header>
 
-    <div class="aboutUs_container">
-      <img src="images/aboutUs_panel.jpeg" />
-      <div class="aboutUs_text">
-        <h1>
-          Sobre o PIBIC
-          <hr />
-        </h1>
-        <p>
-          PIBIC é o Programa Institucional de Bolsas de Iniciação Científica que
-          está fomentando a criação de um artigo de onde as informações deste
-          site foram tiradas.
-        </p>
-        <p>
-          O Artigo em questão busca entender como a transparência é promovida e
-          a sua relevância para o desenvolvimento de software pela visão do
-          gerente de projeto.
-        </p>
-      </div>
+    <div class="header-background">
+      <h1>Nossos principais colaboradores</h1>
     </div>
-
+    <div id="output" class="pokemon-grid"></div>
     <footer>
       <div class="footer-content">
         <p class="message">God bless those in need</p>
@@ -77,7 +64,7 @@
     <div class="popup">
       <button class="close_btn"></button>
       <br />
-      <img src="images/phone_icon.svg" />
+      <img src="./../../images/phone_icon.svg" />
       <h2>Contact Us</h2>
       <form>
         <input type="email" name="email" placeholder="E-mail" />
@@ -85,7 +72,6 @@
         <a href="#">Go</a>
       </form>
     </div>
-
-    <script src="script.js"></script>
+    <script src="./../../scripts/script.js"></script>
   </body>
 </html>
