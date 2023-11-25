@@ -19,4 +19,4 @@ A apresentação será avaliada, bem como o código e o layout final.
 + Ter pelo menos 1 formulário ✔️
 + O DOM deve ser manipulado de alguma forma usando JS ✔️
 + Deve usar o AXIOS para a leitura de dados ✔️
-+ O site todo deve ter no mínimo 5 páginas diferentes.
++ O site todo deve ter no mínimo 5 páginas diferentes. ✔️
